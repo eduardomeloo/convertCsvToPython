@@ -3,7 +3,6 @@ const {PythonShell} = require('python-shell');
 const { knexSqlite } = require('./config/db')
 var fs = require('fs'); 
 const xmlFormat = require('xml-formatter');
-const iconv = require("iconv-lite");
 
 (async () => {
     await PythonShell.run('script.py', null, async function (err, results) {

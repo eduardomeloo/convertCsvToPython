@@ -80,13 +80,16 @@ const xmlFormat = require('xml-formatter');
                 </ListaLancamentos>
             </ImportacaoLancamentoDTO>`
 
-        console.log(fileCsv)
         await fs.writeFileSync(fileCsv.replaceAll('.csv','.xml'), xmlFormat(xmlCompleto, {
             indentation: '  ', 
             filter: (node) => node.type !== 'Comment', 
             collapseContent: true, 
             lineSeparator: '\n'
         }))
-        process.exit()
+
+        console.log('Arquivo Gerado com sucesso.')
+        console.log('Processo Finalizado.')
+
+        setTimeout(function() {process.exit(); }, 3000);
     })
 })()

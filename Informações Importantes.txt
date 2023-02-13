@@ -1,0 +1,9 @@
+//Comando para gerar o Executável
+pkg index.js --target node16-win-x64
+
+// Para rodar o executável em outro computador é necessário que em uma mesma pasta estejam
+// arquivo exe gerado + o arquivo script.py + a pasta node_modules
+
+// É necessário que o computador tenha o Python instalado
+
+//Será gerado um arquivo XML no mesmo diretório do arquivo CSV
